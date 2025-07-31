@@ -1,0 +1,88 @@
+.fondo-imagen {
+  position: relative;
+  background-image: url('fondo_w.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 20px;
+  border-radius: 20px;
+  color: white;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.fondo-imagen::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(230, 239, 252, 0.219); /* Capa negra con 40% de opacidad */
+  border-radius: 20px;
+  z-index: 0;
+}
+
+.fondo-imagen > * {
+  position: relative;
+  z-index: 1; /* Para que el contenido quede arriba de la capa */
+}
+
+
+/* Estilo general de la sección */
+.seccion-razon-ser {
+  background-color: #f5f7fb3a; /* Fondo suave, neutro */
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Contenedor interno */
+.contenedor-titulo {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Título principal */
+.titulo-seccion {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2a2dcb; /* Color principal de la paleta */
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+/* Línea decorativa debajo del título */
+.titulo-seccion::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #2a2dcb;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Subtítulo */
+.subtitulo-seccion {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+  margin-top: 10px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .titulo-seccion {
+    font-size: 2rem;
+  }
+
+  .subtitulo-seccion {
+    font-size: 1rem;
+  }
+}

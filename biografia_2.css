@@ -1,4 +1,3 @@
-
 .fondo-imagen {
   position: relative;
   background-image: url('fondo_w.jpg');
@@ -16,7 +15,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(230, 239, 252, 0.219); /* Capa negra con 40% de opacidad */
+  background-color:#dad8fd4f ; /* Capa negra con 40% de opacidad */
   border-radius: 20px;
   z-index: 0;
 }
@@ -25,6 +24,7 @@
   position: relative;
   z-index: 1; /* Para que el contenido quede arriba de la capa */
 }
+
 
 
 
@@ -49,7 +49,7 @@
   height: 220px;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid #2a2dcb;
+  border: 4px solid #c6c3f5;
   margin-bottom: 20px;
 }
 
@@ -60,7 +60,7 @@
 
 .bio-nombre {
   font-size: 2rem;
-  color: #2a2dcb;
+  color: #c6c3f5;
   margin-bottom: 10px;
 }
 
@@ -82,7 +82,7 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #2a2dcb; /* Azul principal */
+  background-color: #c6c3f5; /* Azul principal */
   color: white;
   padding: 12px 24px;
   border-radius: 30px;
@@ -93,7 +93,7 @@
 }
 
 .boton-correo:hover {
-  background-color: #246aec6b; /* Azul más claro */
+  background-color: #c6c3f5; /* Azul más claro */
   box-shadow: 0 4px 12px rgba(42, 45, 203, 0.5);
 }
 
@@ -124,7 +124,7 @@
 /* Título si lo usas */
 .titulo-logros {
   font-size: 1.5em;
-  color: #2a2dcb;
+  color: ;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -148,8 +148,8 @@
 
 /* Tarjetas individuales (2 visibles por vez) */
 .logro-tarjeta {
-  background-color: rgba(255, 255, 255, 0.322);
-  border: 2px solid #2a2dcb;
+  background-color: #ffffffbe;
+  border: 2px solid #c6c3f5;
   border-radius: 12px;
   width: 48%;
   padding: 15px;
@@ -161,7 +161,11 @@
 }
 
 .logro-tarjeta:hover {
-  background-color: #246aec6b;
+  background-color: #c6c3f5;
+  color: white;
+}
+
+.logro-titulo:hover {
   color: white;
 }
 
@@ -177,7 +181,7 @@
   font-size: 1.1em;
   font-weight: bold;
   margin: 0;
-  color: #2a2dcb;
+  color: #c6c3f5;
 }
 
 .logro-desc {
@@ -203,7 +207,7 @@
 
 .titulo-especialidad {
   font-size: 1.6em;
-  color: #2a2dcb;
+  color: #c6c3f5;
   margin-bottom: 10px;
   font-weight: 600;
 }
@@ -224,8 +228,8 @@
 }
 
 .icono-circular {
-  background-color: rgba(255, 255, 255, 0.322);
-  border: 2px solid #2a2dcb;
+  background-color: #ffffff;
+  border: 2px solid #c6c3f5;
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -244,7 +248,7 @@
 }
 
 .icono-circular:hover {
-  background-color: #246aec6b;
+  background-color: #c6c3f5;
   transform: scale(1.05);
 }
 
@@ -268,7 +272,7 @@
   gap: 20px;
   max-width: 1100px;
   align-items: center;
-  background: rgba(245, 224, 224, 0.199);
+  background: rgba(255, 255, 255, 0.164);
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 4px 12px rgba(42, 45, 203, 0.15);
@@ -292,7 +296,7 @@
 
 .titulo-biografia {
   font-size: 24px;
-  color: #2a2dcb;
+  color: #c6c3f5;
   margin-bottom: 15px;
 }
 
@@ -308,14 +312,14 @@
   border-radius: 12px;
   font-style: italic;
   font-size: 16px;
-  color: #2a2dcb;
+  color: #c6c3f5;
   position: relative;
   margin-bottom: 25px;
 }
 
 .comillas {
   font-size: 24px;
-  color: #2a2dcb;
+  color: #c6c3f5;
   vertical-align: middle;
 }
 
@@ -324,10 +328,8 @@
   filter: brightness(0) saturate(100%) invert(10%) sepia(100%) saturate(500%) hue-rotate(220deg);
 }
 
-
-
 .contenedor-biografia {
-  background-color: rgba(255, 255, 255, 0.322);
+  background-color: rgba(255, 255, 255, 0.637);
   border-radius: 20px;
   padding: 20px;
   transition: background-color 0.4s ease, box-shadow 0.4s ease, color 0.4s ease;
@@ -335,7 +337,7 @@
 }
 
 .contenedor-biografia:hover {
-  background-color: #246aec6b; /* lavanda suave */
+  background-color: #c6c3f5; /* lavanda suave */
   box-shadow: 0 0 20px rgba(198, 195, 245, 0.5);
   color: #1c2b4a; /* azul petróleo para contraste */
 }
@@ -346,7 +348,7 @@
 }
 
 .contenedor-biografia .frase-destacada {
-  background-color: #90bcf744;
+  background-color: #f5f5f5;
  
   padding: 10px 15px;
   border-radius: 8px;
@@ -356,7 +358,8 @@
 }
 
 .contenedor-biografia:hover .frase-destacada {
-  background-color: #e3e9f7da;
+  background-color: #eae8fc;
+ 
   color: #1c2b4a;
 }
 
@@ -367,6 +370,5 @@
 }
 
 .contenedor-biografia:hover .firma-abogado img {
-  background-color: #d0daf02d;
   filter: brightness(0.8);
 }
