@@ -79,11 +79,19 @@
 }
 
 
+
+/*   logros */
+
+
 .bio-logros {
   padding: 20px;
   background-color: #f9f9f9;
+  overflow: hidden; /* Oculta lo que se desliza fuera del marco */
+  max-width: 800px;
+  margin: 0 auto;
 }
 
+/* Título si lo usas */
 .titulo-logros {
   font-size: 1.5em;
   color: #2a2dcb;
@@ -91,23 +99,34 @@
   margin-bottom: 20px;
 }
 
+/* Marco visible para el carrusel */
+
+.slider-marco {
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+  margin: auto;
+}
+
+/* Contenedor de todas las tarjetas, en fila continua */
 .logros-contenedor {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 15px;
+  gap: 16px;
+  transition: transform 0.5s ease-in-out;
 }
 
+/* Tarjetas individuales (2 visibles por vez) */
 .logro-tarjeta {
   background-color: #ffffff;
   border: 2px solid #2a2dcb;
   border-radius: 12px;
-  width: 300px;
+  width: 48%;
   padding: 15px;
   display: flex;
   gap: 15px;
   align-items: flex-start;
+  flex-shrink: 0; /* importante: no reducir tamaño */
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -128,13 +147,21 @@
   font-size: 1.1em;
   font-weight: bold;
   margin: 0;
+  color: #2a2dcb;
 }
 
 .logro-desc {
   font-size: 0.95em;
   margin-top: 5px;
   line-height: 1.4;
+  color: #333;
 }
+
+
+
+
+/*   logros */
+
 
 
 
@@ -266,3 +293,4 @@
   max-width: 150px;
   filter: brightness(0) saturate(100%) invert(10%) sepia(100%) saturate(500%) hue-rotate(220deg);
 }
+
