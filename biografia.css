@@ -1,0 +1,268 @@
+.bio-portada {
+  background-color: #f5f7fa;
+  padding: 50px 20px;
+  font-family: 'Segoe UI', sans-serif;
+
+}
+
+.bio-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.bio-foto img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #2a2dcb;
+  margin-bottom: 20px;
+}
+
+.bio-detalle {
+  max-width: 700px;
+  margin-left: 30px;
+}
+
+.bio-nombre {
+  font-size: 2rem;
+  color: #2a2dcb;
+  margin-bottom: 10px;
+}
+
+.bio-titulo {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.bio-descripcion {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+.boton-correo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #2a2dcb; /* Azul principal */
+  color: white;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton-correo:hover {
+  background-color: #5057f0; /* Azul más claro */
+  box-shadow: 0 4px 12px rgba(42, 45, 203, 0.5);
+}
+
+.material-icons {
+  font-size: 20px;
+}
+
+
+.contenedor-boton {
+  text-align: left; /* centra el botón horizontalmente */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.bio-logros {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.titulo-logros {
+  font-size: 1.5em;
+  color: #2a2dcb;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logros-contenedor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.logro-tarjeta {
+  background-color: #ffffff;
+  border: 2px solid #2a2dcb;
+  border-radius: 12px;
+  width: 300px;
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.logro-tarjeta:hover {
+  background-color: #2a2dcb;
+  color: white;
+}
+
+.logro-icono {
+  font-size: 2rem;
+}
+
+.logro-texto {
+  flex: 1;
+}
+
+.logro-titulo {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.logro-desc {
+  font-size: 0.95em;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+
+
+.seccion-especialidad {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f5f7fa;
+}
+
+.titulo-especialidad {
+  font-size: 1.6em;
+  color: #2a2dcb;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.descripcion-especialidad {
+  color: #444;
+  font-size: 1em;
+  max-width: 650px;
+  margin: 0 auto 30px auto;
+  line-height: 1.5;
+}
+
+.contenedor-iconos {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.icono-circular {
+  background-color: #ffffff;
+  border: 2px solid #2a2dcb;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.icono-circular img {
+  width: 38px;
+  height: 38px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.icono-circular:hover {
+  background-color: #2a2dcb;
+  transform: scale(1.05);
+}
+
+.icono-circular:hover img {
+  filter: brightness(0) invert(1); /* Blanco */
+  transform: scale(1.1);
+}
+
+
+.biografia-abogado {
+  padding: 40px 20px;
+  background-color: #f9f9ff;
+  display: flex;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.contenedor-biografia {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1100px;
+  align-items: center;
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(42, 45, 203, 0.15);
+}
+
+.foto-abogado {
+  flex: 1 1 280px;
+  text-align: center;
+}
+
+.foto-abogado img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contenido-biografia {
+  flex: 2 1 500px;
+}
+
+.titulo-biografia {
+  font-size: 24px;
+  color: #2a2dcb;
+  margin-bottom: 15px;
+}
+
+.descripcion-biografia {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.frase-destacada {
+  background-color: #e0e3ff;
+  padding: 15px 25px;
+  border-radius: 12px;
+  font-style: italic;
+  font-size: 16px;
+  color: #2a2dcb;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.comillas {
+  font-size: 24px;
+  color: #2a2dcb;
+  vertical-align: middle;
+}
+
+.firma-abogado img {
+  max-width: 150px;
+  filter: brightness(0) saturate(100%) invert(10%) sepia(100%) saturate(500%) hue-rotate(220deg);
+}
