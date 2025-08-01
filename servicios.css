@@ -1,0 +1,248 @@
+/* Portada Servicios */
+.portada-servicios {
+  background-color: #f8f9fb;
+  padding: 80px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contenedor-servicios {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.bloque-izquierdo {
+  flex: 1 1 500px;
+  color: #1a1a1a;
+}
+
+.bloque-izquierdo h1 {
+  font-size: 3rem;
+  color: #2a2dcb;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.bloque-izquierdo p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.bloque-derecho {
+  flex: 1 1 500px;
+  text-align: center;
+}
+
+.bloque-derecho img {
+  max-width: 100%;
+  height: auto;
+
+  transition: transform 0.3s ease;
+}
+
+.bloque-derecho img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenedor-servicios {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bloque-izquierdo h1 {
+    font-size: 2.2rem;
+  }
+
+  .bloque-izquierdo p {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* Introducción de Servicios */
+.introduccion-servicios {
+  background-color: #f8f9fb;
+  padding: 60px 20px 30px 20px;
+  text-align: center;
+}
+
+.contenido-intro {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contenido-intro h2 {
+  font-size: 2.5rem;
+  color: #2a2dcb;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.contenido-intro p {
+  font-size: 1.15rem;
+  color: #444;
+  line-height: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contenido-intro h2 {
+    font-size: 2rem;
+  }
+
+  .contenido-intro p {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+/* Tarjeta Base */
+.tarjeta-servicio {
+  position: relative;
+  background-color: #fff;
+  padding: 30px 20px 40px 20px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  max-width: 350px;
+  margin: auto;
+  text-align: left;
+}
+
+/* Ícono SVG */
+.icono-servicio {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #2a2dcb;
+  transition: color 0.4s ease;
+}
+
+
+.icono-servicio-1 {
+   
+    top: 20px;
+    left: 20px;
+    color: #2a2dcb;
+    transition: color 0.4s ease;
+    margin: 10px 20px 30px 60px ;
+
+        
+}
+
+
+
+/* Título */
+.titulo-servicio {
+  margin-left: 60px;
+  font-size: 1.5rem;
+  color: #2a2dcb;
+  font-weight: 700;
+  margin-top: 0;
+  transition: color 0.4s ease;
+}
+
+/* Línea debajo del título */
+.linea-servicio {
+  width: 50px;
+  height: 3px;
+  background-color: #2a2dcb;
+  margin: 10px 0 20px 60px;
+  transition: background-color 0.4s ease;
+}
+
+/* Descripción */
+.descripcion-servicio {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-left: 60px;
+  transition: color 0.4s ease;
+}
+
+/* Botón o enlace */
+.link-servicio {
+  display: inline-block;
+  margin-left: 60px;
+  margin-top: 20px;
+  color: #2a2dcb;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.4s ease;
+}
+
+/* Hover completo */
+.tarjeta-servicio:hover {
+  background-color: #949df583;
+}
+
+.tarjeta-servicio:hover .icono-servicio-1,
+.tarjeta-servicio:hover .titulo-servicio,
+.tarjeta-servicio:hover .descripcion-servicio,
+.tarjeta-servicio:hover .link-servicio {
+  color: #ffffff;
+}
+
+.tarjeta-servicio:hover .linea-servicio {
+  background-color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .tarjeta-servicio {
+    max-width: 90%;
+    padding: 25px 15px;
+  }
+
+  .titulo-servicio, .descripcion-servicio, .link-servicio {
+    margin-left: 50px;
+  }
+
+  .icono-servicio svg {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
+
+/* Contenedor del botón */
+.boton-contenedor-1 {
+  margin-top: 25px;
+  text-align: right;
+  padding-left: 60px;
+
+}
+
+
+/* Botón estilo pill */
+.link-servicio {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 50px;
+  background-color: #2a2dcb;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  border: none;
+  text-align: left;
+
+}
+
+/* Al hacer hover sobre la tarjeta, cambia color del botón */
+.tarjeta-servicio:hover .link-servicio {
+  background-color: #ffffff;
+  color: #4556f583;
+}
+
