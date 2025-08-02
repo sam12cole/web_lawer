@@ -37,13 +37,6 @@
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-
-   
-    
-
-    
-
-
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
     <!-- Swiper CSS -->
@@ -51,7 +44,13 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-dNmFz5kWm6FvT50YThdM+uH52c0u+jV8NmQ/xDprQ+vJu77MPGmO+eLXWmqMT3mBQY2qCH/0qlrQjD7BebQ2vQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 
 
 
@@ -286,7 +285,6 @@
 
  <!-- Encabezado o título fuerte -->
 
-
         <section class="portada-servicios fondo-compartido">
                 <div class="contenedor-servicios">
                     
@@ -388,9 +386,87 @@
                                         <p class="descripcion-servicio">
                                         Incluye orientación preventiva y correctiva en diversas áreas del derecho.
                                         </p>
+                                        <!-- Contenedor del botón -->
                                         <div class="boton-contenedor-1">
-                                            <a href="#" class="link-servicio">Learn more</a>
+                                        <a href="#" class="link-servicio" id="abrirOffCanvas">Learn more</a>
                                         </div>
+
+                                                <!-- Off-canvas lateral derecho -->
+                                            <div id="overlay" class="overlay hidden"></div>
+                                                <div id="offCanvas" class="off-canvas">
+                                                        <div class="off-canvas-body">
+                                                                <h2 class="titulo-servicio">Asesoría Legal Integral</h2>
+                                                                <p class="descripcion-principal">
+                                                                    Te acompañamos desde el primer paso hasta la resolución completa de tu caso. Nuestro compromiso es darte tranquilidad, claridad legal y resultados reales.
+                                                                </p>
+
+
+
+                                                                <div class="mini-ficha">
+                                                                    <div class="ficha-letra">1</div>
+                                                                    <div class="ficha-linea"></div>
+                                                                    <div class="ficha-icono">
+                                                                        <i class="fas fa-file-alt"></i><!-- O usa <img src="..." alt=""> -->
+                                                                    </div>
+                                                                    <div class="ficha-texto">
+                                                                        <h4 class="titulo">Evaluación y Diagnóstico Jurídico</h4>
+                                                                        <p class="descripcion">Análisis detallado del caso, revisión de documentos y aplicación de las normas ecuatorianas vigentes para definir una estrategia legal clara.</p>
+                                                                    </div>
+                                                                    <div class="ficha-franja"></div>
+                                                                </div>
+                                                                
+
+  
+
+                                                                <div class="mini-ficha reversa">
+                                                                <div class="ficha-letra_2">2</div>
+                                                                <div class="ficha-linea"></div>
+                                                                <div class="ficha-icono_2">
+                                                                    <i class="fas fa-pen-fancy"></i>
+                                                                </div>
+                                                                <div class="ficha-texto">
+                                                                    <h4 class="titulo">Elaboración y Formalización de Documentos</h4>
+                                                                    <p class="descripcion">Redacción y revisión de contratos, demandas y otros escritos legales, asegurando el cumplimiento de los requisitos legales y su formalización ante autoridades competentes.</p>
+                                                                </div>
+                                                                <div class="ficha-franja_2"></div> <!-- Esta irá visualmente al inicio -->
+                                                                </div>
+
+
+                                                                <div class="mini-ficha">
+                                                                <div class="ficha-letra">3</div>
+                                                                    <div class="ficha-linea"></div>
+                                                                    <div class="ficha-icono">
+                                                                        <i class="fas fa-balance-scale"></i> <!-- O usa <img src="..." alt=""> -->
+                                                                    </div>
+                                                                    <div class="ficha-texto">
+                                                                        <h4 class="titulo">Tramitación Procesal y Representación</h4>
+                                                                        <p class="descripcion">Presentación de escritos y recursos ante juzgados y entidades, acompañamiento en audiencias, mediaciones y conciliaciones según la legislación aplicable.</p>
+                                                                    </div>
+                                                                    <div class="ficha-franja"></div>
+                                                                </div>
+                                                                
+                                                                <div class="mini-ficha reversa">
+                                                                    <div class="ficha-letra">4</div>
+                                                                    <div class="ficha-linea"></div>
+                                                                    <div class="ficha-icono">
+                                                                        <i class="fas fa-gavel"></i>
+                                                                    </div>
+                                                                    <div class="ficha-texto">
+                                                                        <h4 class="titulo">Ejecución de Sentencias y Recursos</h4>
+                                                                        <p class="descripcion">Análisis y seguimiento de sentencias, presentación de recursos legales y asesoría para garantizar la ejecución efectiva de las decisiones judiciales.</p>
+                                                                    </div>
+                                                                    <div class="ficha-franja"></div> <!-- Esta irá visualmente al inicio -->
+                                                                </div>
+
+                                                                <div class="frase-impacto">
+                                                                    “Tu tranquilidad legal, es nuestro mayor compromiso.”
+                                                                </div>
+                                                        </div>
+                                                                
+                                                    <button id="cerrarOffCanvas">Cerrar</button>
+                                                </div>
+
+
 
                             </div>
 
@@ -1126,6 +1202,8 @@
 
 <!-- Bootstrap 5 necesita el script para funcionar -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="offcanvas.js"></script>
 
 
 

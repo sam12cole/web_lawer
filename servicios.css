@@ -246,3 +246,315 @@
   color: #4556f583;
 }
 
+
+/* Estilos del Off-Canvas */
+
+.off-canvas {
+  position: fixed;
+  top: 0;
+  right: -80vw;           /* Oculto hacia la derecha */
+  width: 80vw;            /* 80% del ancho de la pantalla */
+  max-width: 500px;       /* No se pasa de 500px en pantallas grandes */
+  height: 100%;
+  background-color: #337eeef6;
+  color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transition: right 0.4s ease-in-out;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Mostrar el panel */
+.off-canvas.show {
+  right: 0;
+}
+
+@media (max-width: 600px) {
+  .off-canvas {
+    width: 100vw;
+    right: -100vw;
+    border-radius: 0; /* Quita esquinas para móviles si prefieres */
+  }
+
+  .off-canvas.show {
+    right: 0;
+  }
+}
+
+
+/* Cabecera del panel */
+.off-canvas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Título */
+.off-canvas-header .titulo {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Botón de cerrar */
+.cerrar-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Cuerpo del panel */
+.off-canvas-body {
+  padding: 1rem;
+  overflow-y: auto;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+
+
+/* primer off canva*/
+
+.titulo-servicio {
+  font-size: 1.5rem;
+  margin-bottom: 0.8rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+.descripcion-principal {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #e0e0ff;
+  text-align: center;
+}
+
+.lista-servicio {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.lista-servicio li {
+  margin-bottom: 0.7rem;
+  padding: 0.4rem 0.8rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #ffffff;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #f0f0ff;
+  display: flex;
+  align-items: center;
+}
+
+.lista-servicio .icono {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  color: #00ffcc;
+}
+
+.frase-impacto {
+  margin-top: 1.5rem;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 0.8rem 1rem;
+  border-radius: 15px;
+}
+
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 999;
+  display: none;
+}
+
+.overlay.show {
+  display: block;
+}
+
+#cerrarOffCanvas {
+  display: none;
+}
+
+
+/* ficha */
+
+.mini-ficha {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 15px 20px;
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.1),      /* sombra inferior suave */
+    0 1px 3px rgba(0, 0, 0, 0.08);     /* contorno sutil */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 10px;
+}
+
+
+.mini-ficha:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 10px 15px rgba(0, 0, 0, 0.15),
+    0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.ficha-letra  {
+  font-weight: bold;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  padding: 0px 10px ;
+  color: #fdd702;
+}
+
+.ficha-letra_2  {
+  font-weight: bold;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  padding: 0px 10px ;
+  color: #8195b7;
+}
+.ficha-letra_3  {
+  font-weight: bold;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  padding: 0px 10px ;
+  color: #80c069;
+}
+.ficha-letra_4  {
+  font-weight: bold;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  padding: 0px 10px ;
+  color: #6cc4cc;
+}
+
+
+
+.ficha-linea {
+  width: 2px;
+  height: 40px;
+  background-color: #ccc;
+}
+
+.ficha-icono, .ficha-icono_2, .ficha-icono_3, .ficha-icono_4 {
+  font-size: 24px;
+  color: #555;
+  transition: color 0.3s ease;
+  padding: 0px 5px ;
+
+}
+
+.mini-ficha:hover .ficha-icono {
+  color: #fdd702; /* al pasar el mouse */
+}
+
+.mini-ficha:hover .ficha-icono_2 {
+  color: #8195b7; /* al pasar el mouse */
+}
+.mini-ficha:hover .ficha-icono_3 {
+  color: #80c069; /* al pasar el mouse */
+}
+.mini-ficha:hover .ficha-icono_4 {
+  color: #6cc4cc; /* al pasar el mouse */
+}
+
+
+.ficha-texto {
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+.ficha-texto .titulo {
+  margin: 0;
+  font-size: 16px;
+  color: #222;
+}
+
+.ficha-texto .descripcion {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.ficha-franja {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  background-color: #fdd702;
+  border-radius: 0 12px 12px 0;
+  transition: background-color 0.3s ease;
+}
+
+.ficha-franja_3 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 100%;
+  background-color: #80c069;
+  border-radius: 0 12px 12px 0;
+  transition: background-color 0.3s ease;
+}
+
+.mini-ficha:hover .ficha-franja {
+  background-color: #f8dd459f;
+}
+.mini-ficha:hover .ficha-franja_3 {
+  background-color: #a9fa8ca4;
+}
+
+/* ficha 2 reversa  */
+
+.mini-ficha.reversa {
+  flex-direction: row-reverse;
+  text-align: right;
+  position: relative;
+}
+
+.mini-ficha.reversa .ficha-franja_2 {
+  position: absolute;
+  left: 0; /* ¡Aquí la hacemos aparecer a la izquierda! */
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background-color: #8195b7;
+  border-radius: 5px 0 0 5px;
+}
+
+.mini-ficha.reversa .ficha-franja_4 {
+  position: absolute;
+  left: 0; /* ¡Aquí la hacemos aparecer a la izquierda! */
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background-color: #6cc4cc;
+  border-radius: 5px 0 0 5px;
+}
+
+
+
+/* liena de tiempo /*
