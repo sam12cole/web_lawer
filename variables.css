@@ -350,7 +350,7 @@
 
 /* Cada paso */
 .paso {
-  background-color: #fff;
+  background-color: #f0f2ff;
   border: 2px solid #2a2dcb;
   border-radius: 10px;
   padding: 25px;
@@ -363,7 +363,7 @@
 
 .paso:hover {
   transform: translateY(-5px);
-  background-color: #e9ebff;
+  background-color: #858eed9b;
 }
 
 .paso-numero {
