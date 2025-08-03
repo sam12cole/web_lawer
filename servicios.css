@@ -252,11 +252,22 @@
 .off-canvas {
   position: fixed;
   top: 0;
-  right: -80vw;           /* Oculto hacia la derecha */
-  width: 80vw;            /* 80% del ancho de la pantalla */
-  max-width: 500px;       /* No se pasa de 500px en pantallas grandes */
+  right: -80vw;           
+  width: 80vw;            
+  max-width: 500px;       
   height: 100%;
-  background-color: #337eeef6;
+
+  /* Fondo con imagen y degradado */
+  background-image: linear-gradient(
+       #738ee0,
+      #a4b4e4
+      
+    ),
+    url('imagenes/fondo_w.jpg'); /* Cambia esto con la ruta real */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   color: white;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
   border-top-left-radius: 20px;
@@ -266,6 +277,7 @@
   display: flex;
   flex-direction: column;
 }
+
 
 
 /* Mostrar el panel */
@@ -392,10 +404,13 @@
 
 /* ficha */
 
-.mini-ficha {
+.mini-ficha,
+.mini-ficha_3,
+.mini-ficha_4,
+.mini-ficha_2 {
   display: flex;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.705);
   border-radius: 12px;
   padding: 15px 20px;
   box-shadow:
@@ -413,6 +428,31 @@
   box-shadow:
     0 10px 15px rgba(0, 0, 0, 0.15),
     0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #f2e8a3 ;
+}
+
+.mini-ficha_2:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 10px 15px rgba(0, 0, 0, 0.15),
+    0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #cee073c5	 ;
+}
+
+.mini-ficha_3:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 10px 15px rgba(0, 0, 0, 0.15),
+    0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #dd7d7bbd	 ;
+}
+
+.mini-ficha_4:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 10px 15px rgba(0, 0, 0, 0.15),
+    0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #6cc4cc	 ;
 }
 
 
@@ -422,24 +462,25 @@
   width: 30px;
   text-align: center;
   padding: 0px 10px ;
-  color: #fdd702;
+  color: #f2e8a3;
 }
 
-.ficha-letra_2  {
+.ficha-letra_2 {
   font-weight: bold;
   font-size: 20px;
   width: 30px;
   text-align: center;
   padding: 0px 10px ;
-  color: #8195b7;
+  color: #cee073c5;
 }
+
 .ficha-letra_3  {
   font-weight: bold;
   font-size: 20px;
   width: 30px;
   text-align: center;
   padding: 0px 10px ;
-  color: #80c069;
+  color: #dd7d7bbd;
 }
 .ficha-letra_4  {
   font-weight: bold;
@@ -450,6 +491,12 @@
   color: #6cc4cc;
 }
 
+.mini-ficha:hover .ficha-letra, 
+.mini-ficha_3:hover .ficha-letra_3, 
+.mini-ficha_4:hover .ficha-letra_4, 
+.mini-ficha_2:hover .ficha-letra_2 {
+  color: #ffffff; /* al pasar el mouse */
+}
 
 
 .ficha-linea {
@@ -458,43 +505,68 @@
   background-color: #ccc;
 }
 
-.ficha-icono, .ficha-icono_2, .ficha-icono_3, .ficha-icono_4 {
+.ficha-icono {
   font-size: 24px;
-  color: #555;
+  color: #f2e8a3;
   transition: color 0.3s ease;
   padding: 0px 5px ;
 
 }
 
-.mini-ficha:hover .ficha-icono {
-  color: #fdd702; /* al pasar el mouse */
+.ficha-icono_2 {
+  font-size: 24px;
+  color: #cee073c5;
+  transition: color 0.3s ease;
+  padding: 0px 5px ;
+
+}
+.ficha-icono_3 {
+  font-size: 24px;
+  color: #dd7d7bbd;
+  transition: color 0.3s ease;
+  padding: 0px 5px ;
 }
 
-.mini-ficha:hover .ficha-icono_2 {
-  color: #8195b7; /* al pasar el mouse */
+.ficha-icono_4 {
+  font-size: 24px;
+  color: #6cc4cc;
+  transition: color 0.3s ease;
+  padding: 0px 5px ;
 }
-.mini-ficha:hover .ficha-icono_3 {
-  color: #80c069; /* al pasar el mouse */
+
+.mini-ficha:hover .ficha-icono, 
+.mini-ficha_2:hover .ficha-icono_2, 
+.mini-ficha_3:hover .ficha-icono_3, 
+.mini-ficha_4:hover .ficha-icono_4 {
+  color: #ffffff; /* al pasar el mouse */
 }
-.mini-ficha:hover .ficha-icono_4 {
-  color: #6cc4cc; /* al pasar el mouse */
-}
+
+
 
 
 .ficha-texto {
   flex-grow: 1;
-  padding: 0 10px;
+  padding: 0 12px;
 }
 
 .ficha-texto .titulo {
   margin: 0;
-  font-size: 16px;
+  font-size: 13px;
   color: #222;
 }
 
+.mini-ficha:hover .ficha-texto .titulo, 
+.mini-ficha_2:hover .ficha-texto .titulo, 
+.mini-ficha_3:hover .ficha-texto .titulo, 
+.mini-ficha_4:hover .ficha-texto .titulo {
+  color: #ffffff; /* al pasar el mouse */
+}
+
+
+
 .ficha-texto .descripcion {
   margin: 0;
-  font-size: 14px;
+  font-size: 10px;
   color: #555;
 }
 
@@ -504,10 +576,11 @@
   right: 0;
   width: 20px;
   height: 100%;
-  background-color: #fdd702;
+  background-color: #f2e8a3;
   border-radius: 0 12px 12px 0;
   transition: background-color 0.3s ease;
 }
+
 
 .ficha-franja_3 {
   position: absolute;
@@ -515,16 +588,17 @@
   right: 0;
   width: 20px;
   height: 100%;
-  background-color: #80c069;
+  background-color: #dd7d7bbd;
   border-radius: 0 12px 12px 0;
   transition: background-color 0.3s ease;
 }
 
 .mini-ficha:hover .ficha-franja {
-  background-color: #f8dd459f;
+  background-color: #fcfcddaf;
 }
-.mini-ficha:hover .ficha-franja_3 {
-  background-color: #a9fa8ca4;
+
+.mini-ficha_3:hover .ficha-franja_3 {
+  background-color: #fcdfdff5;
 }
 
 /* ficha 2 reversa  */
@@ -535,17 +609,21 @@
   position: relative;
 }
 
-.mini-ficha.reversa .ficha-franja_2 {
+.mini-ficha_2.reversa .ficha-franja_2 {
   position: absolute;
   left: 0; /* ¡Aquí la hacemos aparecer a la izquierda! */
   top: 0;
   bottom: 0;
   width: 20px;
-  background-color: #8195b7;
+  background-color: #cee073c5;
   border-radius: 5px 0 0 5px;
 }
 
-.mini-ficha.reversa .ficha-franja_4 {
+.mini-ficha_2:hover .ficha-franja_2 {
+  background-color: #e8f0c3ab; /* verde o el color que quieras */
+}
+
+.mini-ficha_4.reversa .ficha-franja_4 {
   position: absolute;
   left: 0; /* ¡Aquí la hacemos aparecer a la izquierda! */
   top: 0;
@@ -555,6 +633,50 @@
   border-radius: 5px 0 0 5px;
 }
 
+.mini-ficha_4:hover .ficha-franja_4 {
+  background-color: #c3f4f8; /* verde o el color que quieras */
+}
+
 
 
 /* liena de tiempo /*
+
+
+.bloque-contacto-equipo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  flex-wrap: nowrap;
+}
+
+/* Botón estilo actual (si ya tienes .link-servicio estilizado, esto lo puedes ajustar) */
+.link-servicio {
+  background-color: #738ee0;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.link-servicio:hover {
+  background-color: #4a6cd4;
+}
+
+/* Avatares */
+.avatares {
+  display: flex;
+  gap: 6px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
