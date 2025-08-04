@@ -1,0 +1,177 @@
+.razon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent; /* el color con transparencia 00 no es válido */
+  border-radius: 16px;
+  padding: 2.7rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  gap: 1.5rem; /* espacio entre columnas */
+}
+
+.razon-texto {
+  flex: 1 1 60%;
+  padding-right: 1.5rem;
+  min-width: 280px; /* para que no se encoja demasiado */
+}
+
+.razon-imagen {
+  flex: 1 1 35%;
+  text-align: center;
+  min-width: 280px;
+}
+
+.razon-imagen img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid #2a2dcb;
+  background-color: white;
+  padding: 10px;
+}
+
+.titulo {
+  color: #2a2dcb;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+  color: #1e1e1e;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.descripcion {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* --- MEDIA QUERY para pantallas pequeñas --- */
+@media (max-width: 768px) {
+  .razon-container {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .razon-texto,
+  .razon-imagen {
+    flex: 1 1 100%;
+    padding-right: 0;
+    min-width: auto;
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+
+
+/*   mision vison y objetibo */
+
+.valores-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  background-color: transparent; /* quitado #f5f7ff00 que no es válido */
+  border-radius: 12px;
+  flex-wrap: wrap; /* permite que se ajusten en varias filas */
+}
+
+/* Tarjetas */
+.card-superpuesta {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  border: 2px solid #2a2dcb;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(42, 45, 203, 0.1);
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  flex-shrink: 0;
+}
+
+/* Contenidos superpuestos */
+.contenido-visible,
+.contenido-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  transition: all 0.4s ease;
+}
+
+.contenido-visible {
+  background-color: white;
+  color: #2a2dcb;
+  font-size: 1.8rem;
+  z-index: 1;
+}
+
+.contenido-hover {
+  background-color: rgba(91, 93, 217, 0.27);
+  color: white;
+  opacity: 0;
+  z-index: 2;
+  transform: scale(1.1);
+  font-size: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.card-superpuesta:hover {
+  transform: scale(1.1);
+}
+
+.card-superpuesta:hover .contenido-hover {
+  opacity: 1;
+  transform: scale(1);
+  color: #1e1e1e;
+}
+
+.card-superpuesta:hover .contenido-visible {
+  opacity: 0;
+  transform: scale(1.2);
+}
+
+/* --- MEDIA QUERIES para pantallas pequeñas --- */
+@media (max-width: 768px) {
+  .valores-container {
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .card-superpuesta {
+    width: 90vw;  /* se adapta casi al ancho completo del móvil */
+    max-width: 350px;
+    height: auto; /* altura automática para que se adapte al contenido */
+    min-height: 150px;
+  }
+
+  .contenido-visible {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .contenido-hover {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+  }
+}

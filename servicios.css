@@ -1,7 +1,7 @@
 /* Portada Servicios */
 .portada-servicios {
   background-color: #f8f9fb;
-  padding: 80px 20px;
+  padding: 80px 20px 0px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .bloque-izquierdo {
-  flex: 1 1 500px;
+  flex: 1 1 200px;
   color: #1a1a1a;
 }
 
@@ -34,7 +34,7 @@
 }
 
 .bloque-derecho {
-  flex: 1 1 500px;
+  flex: 1 1 280px;
   text-align: center;
 }
 
@@ -150,6 +150,8 @@
   font-weight: 700;
   margin-top: 0;
   transition: color 0.4s ease;
+  text-align: left; 
+
 }
 
 /* Línea debajo del título */
@@ -218,7 +220,7 @@
 
 /* Contenedor del botón */
 .boton-contenedor-1 {
-  margin-top: 25px;
+  margin-top: 8px;
   text-align: right;
   padding-left: 60px;
 
@@ -243,7 +245,8 @@
 /* Al hacer hover sobre la tarjeta, cambia color del botón */
 .tarjeta-servicio:hover .link-servicio {
   background-color: #ffffff;
-  color: #4556f583;
+  color: #152083da;
+  text-decoration: none;
 }
 
 
@@ -259,11 +262,11 @@
 
   /* Fondo con imagen y degradado */
   background-image: linear-gradient(
-       #738ee0,
-      #a4b4e4
+       #315bd7e8,
+      #a4b4e4b9
       
     ),
-    url('imagenes/fondo_w.jpg'); /* Cambia esto con la ruta real */
+    url('imagenes/fondo_2w.jpg'); /* Cambia esto con la ruta real */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -284,6 +287,9 @@
 .off-canvas.show {
   right: 0;
 }
+
+
+
 
 @media (max-width: 600px) {
   .off-canvas {
@@ -334,7 +340,7 @@
 
 /* primer off canva*/
 
-.titulo-servicio {
+.titulo-servicio_1 {
   font-size: 1.5rem;
   margin-bottom: 0.8rem;
   color: #ffffff;
@@ -397,9 +403,10 @@
   display: block;
 }
 
-#cerrarOffCanvas {
+.btn-cerrar {
   display: none;
 }
+
 
 
 /* ficha */
@@ -563,10 +570,9 @@
 }
 
 
-
 .ficha-texto .descripcion {
   margin: 0;
-  font-size: 10px;
+  font-size: 11px;
   color: #555;
 }
 
@@ -639,7 +645,7 @@
 
 
 
-/* liena de tiempo /*
+/* liena de tiempo */
 
 
 .bloque-contacto-equipo {
@@ -652,23 +658,30 @@
 
 /* Botón estilo actual (si ya tienes .link-servicio estilizado, esto lo puedes ajustar) */
 .link-servicio {
-  background-color: #738ee0;
+  background-color: #2429a2d5;
   color: white;
   padding: 12px 24px;
   border-radius: 40px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  font-size: 0.85rem;
 }
 
-.link-servicio:hover {
-  background-color: #4a6cd4;
+.bloque-contacto-equipo:hover .link-servicio {
+  background-color: #15175a6d;
+  color: white;
+  text-decoration: none;
+
 }
+
+
 
 /* Avatares */
 .avatares {
   display: flex;
   gap: 6px;
+  margin-top: 14px;
 }
 
 .avatar {
@@ -677,6 +690,29 @@
   border-radius: 50%;
   background-size: cover;
   background-position: center;
-  border: 2px solid white;
+  border: 2px solid #fffafac1;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.bloque-contacto-equipo:hover .avatar {
+  border: 2px solid #15175a6d
+  ;
+  
+}
+
+
+.contenedor_fichas {
+  display: flex;
+  flex-wrap: wrap;       /* Permite que los ítems bajen si no caben */
+  justify-content: center;
+  align-items: flex-start;
+           /* Espacio entre fichas */
+  width: 100%;
+    /* Opcional: limita el ancho máximo */
+  margin: 0 auto;         /* Centrado horizontal */
+  padding:  0rem 1.5rem 0rem 1.5rem;
+  box-sizing: border-box;
+  background-color: transparent;  /* No apariencia física */
 }
