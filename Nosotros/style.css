@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
+body {
+  font-family: "Open Sans", sans-serif;
+}
+@media (min-width: 992px) {
+  body {
+    padding: 15vh 0 0 0;
+  }
+}
+
+.btn {
+  border: 0;
+  border-radius: 0px;
+  padding: 8px 3vw;
+}
+
+.info-wrapper {
+  list-style: none;
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  .info-wrapper {
+    height: 350px;
+  }
+}
+.info-wrapper [class^=infobox] {
+  margin: 35px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+@media (min-width: 992px) {
+  .info-wrapper [class^=infobox] {
+    margin: 10px 0;
+  }
+}
+@media (min-width: 992px) {
+  .info-wrapper [class^=infobox] {
+    position: absolute;
+  }
+}
+.info-wrapper [class^=infobox] .icon {
+  font-weight: normal;
+  padding: 15px;
+  border: 10px solid;
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-content: center;
+  background: #fff;
+}
+.info-wrapper [class^=infobox] .icon i {
+  font-size: 4em;
+  text-align: center;
+}
+.info-wrapper [class^=infobox] .info-text {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  justify-content: center;
+  padding: 0 15px;
+  max-width: 220px;
+}
+.info-wrapper [class^=infobox] .info-text h4 {
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+.info-wrapper [class^=infobox] a:hover {
+  text-decoration: none;
+  transform: scale(1.05);
+}
+.info-wrapper .infobox-1 {
+  top: 0;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .info-wrapper .infobox-1 {
+    right: 18%;
+  }
+}
+.info-wrapper .infobox-1 a {
+  color: #0d72ba;
+}
+.info-wrapper .infobox-1 .btn {
+  background: #0d72ba;
+}
+.info-wrapper .infobox-2 {
+  top: 45%;
+  right: 0;
+}
+.info-wrapper .infobox-2 a {
+  color: #56c6d2;
+}
+.info-wrapper .infobox-2 .btn {
+  background: #56c6d2;
+}
+.info-wrapper .infobox-3 {
+  top: 100%;
+  right: 7%;
+}
+.info-wrapper .infobox-3 a {
+  color: #8cc63e;
+}
+.info-wrapper .infobox-3 .btn {
+  background: #8cc63e;
+}
+.info-wrapper .infobox-4 {
+  top: 100%;
+  left: 7%;
+}
+@media (min-width: 992px) {
+  .info-wrapper .infobox-4 .icon {
+    order: 2;
+  }
+}
+.info-wrapper .infobox-4 a {
+  color: #f99c2c;
+}
+.info-wrapper .infobox-4 .btn {
+  background: #f99c2c;
+}
+.info-wrapper .infobox-5 {
+  top: 45%;
+  left: 0%;
+}
+@media (min-width: 992px) {
+  .info-wrapper .infobox-5 .icon {
+    order: 2;
+  }
+}
+.info-wrapper .infobox-5 a {
+  color: #6d58a5;
+}
+.info-wrapper .infobox-5 .btn {
+  background: #6d58a5;
+}

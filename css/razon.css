@@ -175,3 +175,37 @@
     padding: 0.5rem;
   }
 }
+
+
+/* valores de razon  */
+
+.seccion-diagrama {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f8f9ff00; /* Puedes usar #2a2dcb si deseas el azul de tu paleta */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contenedor-diagrama {
+  width: 100%;
+  max-width: 1100px;
+  height: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 16px;
+  background-color: #ffffff00;
+  overflow: hidden; /* <- Esto elimina la barra */
+}
+
+/* Ajuste para SVG, canvas o imágenes para que escalen bien */
+.contenedor-diagrama > * {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain; /* Muy útil para imágenes o SVG */
+}
