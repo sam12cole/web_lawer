@@ -1,0 +1,72 @@
+
+
+
+
+.bg-light {
+    background: rgba(0,0,0,0.3);;
+    /* El degradado va de un azul semitransparente a un blanco claro */
+    --bs-bg-opacity: 1; /* Esta línea ya no es necesaria con el degradado */
+    border-radius: 0 1.5rem 1.5rem 0;
+  
+    transition: box-shadow 0.3s ease-in-out;
+
+}
+
+.bg-light1:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Media Query para pantallas pequeñas (cuando el botón del Offcanvas es visible) */
+@media (max-width: 767px) {
+    .bg-light {
+        /* Nuevo degradado para el menú Offcanvas */
+        background: linear-gradient(to right, #0c1f5fe3, #1669b3ad);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Sombra ajustada para móviles */
+    }
+    .offcanvas {
+    max-width: 55% !important; 
+    visibility: hidden;
+    background-color: var(--bs-offcanvas-bg);
+
+    }
+}
+
+.offcanvas-body {
+   
+    padding-top: 1rem;
+    padding-right: 0rem !important;
+    padding-bottom: 1rem;
+    padding-left: 0rem !important;
+    overflow-y: auto;
+}
+
+.pe {
+    padding-right: 0rem !important;
+}
+
+.header_titulo {
+    color: rgb(255, 255, 255);
+}
+
+.nav-icon {
+    color: rgba(255, 255, 255, 0);
+}
+
+.nav-item:hover .header_titulo {
+        color: rgb(3, 52, 143);
+    }
+
+@media (max-width: 767px) {
+    .nav-item {
+    padding: 0rem 2rem 0rem 2rem ;
+}
+    .header_titulo, .nav-icon {
+        color: rgba(226, 236, 248, 0.719);
+        font-size: 11px;
+    }
+
+    .nav-item:hover .header_titulo,
+    .nav-item:hover .nav-icon {
+        color: rgb(255, 255, 255);
+    }
+}

@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300");
+
+
+
+.btn {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 2rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+}
+
+.info-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.infobox {
+  flex: 1 1 300px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.infobox:hover {
+  transform: scale(1.03);
+}
+
+.icon {
+  font-size: 3em;
+  border: 6px solid;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.info-text h4 {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.info-text p {
+  font-size: 0.95em;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* Colores por tipo */
+.infobox-1 .icon {
+  border-color: #0d72ba;
+  color: #0d72ba;
+}
+.infobox-1 .btn {
+  background-color: #0d72ba;
+}
+
+.infobox-2 .icon {
+  border-color: #56c6d2;
+  color: #56c6d2;
+}
+.infobox-2 .btn {
+  background-color: #56c6d2;
+}
+
+.infobox-3 .icon {
+  border-color: #8cc63e;
+  color: #8cc63e;
+}
+.infobox-3 .btn {
+  background-color: #8cc63e;
+}
+
+.infobox-4 .icon {
+  border-color: #f99c2c;
+  color: #f99c2c;
+}
+.infobox-4 .btn {
+  background-color: #f99c2c;
+}
+
+.infobox-5 .icon {
+  border-color: #6d58a5;
+  color: #6d58a5;
+}
+.infobox-5 .btn {
+  background-color: #6d58a5;
+}
+
+.infobox-1,
+.infobox-2,
+.infobox-3,
+.infobox-4,
+.infobox-5 {
+  transition: all 0.4s ease-in-out;
+ 
+}
+
+/* Efecto al pasar el mouse */
+.infobox-1:hover,
+.infobox-2:hover,
+.infobox-3:hover,
+.infobox-4:hover,
+.infobox-5:hover {
+  transform: scale(1.05); /* Agranda ligeramente */
+}
+
